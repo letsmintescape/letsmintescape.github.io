@@ -963,8 +963,8 @@ function switchTab(tab, evt) {
 
 const BLOCKED_RANGE_START = new Date(2025, 5, 28); // 28. Juni 2025
 const BLOCKED_RANGE_END   = new Date(2025, 7,  8); // 8. August 2025
-const BLOCKED_SINGLE      = new Date(2025, 5,  5); // 5. Juni 2025
-const START_DATE          = new Date(2025, 4, 22); // 22. Mai 2025
+const BLOCKED_SINGLE      = new Date(2025, 7,  7); // 5. Juni 2025
+const START_DATE          = new Date(2025, 5, 5); // 22. Mai 2025
 const END_DATE            = new Date(2025, 11, 31); // 31. Dez 2025
 
 function isDateBlocked(d) {
@@ -1058,7 +1058,7 @@ function generatePassword(id) {
   const words = ['ALPHA','BRAVO','DELTA','ECHO','FOXTROT','GAMMA','HELIX','INDIGO','JUNO','KAPPA','LUNA','NEXUS','ORBIT','PIXEL','QUASAR'];
   const idx = id % words.length;
   const num = (id * 7 + 13) % 100;
-  return `MINT-${words[idx]}-${String(num).padStart(2,'0')}`;
+  return `The_Last_Code`;
 }
 
 function submitBooking() {
