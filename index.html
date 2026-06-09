@@ -963,11 +963,9 @@ function switchTab(tab, evt) {
 
 const BLOCKED_RANGE_START = new Date(2025, 5, 28); // 28. Juni 2025
 const BLOCKED_RANGE_END   = new Date(2025, 7,  8); // 8. August 2025
-const BLOCKED_RANGE_START = new Date(2025, 5, 28); // 28. Juni 2025
-const BLOCKED_RANGE_END   = new Date(2025, 9,  5); // 8. August 2025
-const BLOCKED_SINGLE      = new Date(2025, 9,  17); // 5. Juni 2025
-const START_DATE          = new Date(2025, 5, 5); // 22. Mai 2025
-const END_DATE            = new Date(2025, 10, 30); // 31. Dez 2025
+const BLOCKED_SINGLE      = new Date(2025, 5,  5); // 5. Juni 2025
+const START_DATE          = new Date(2025, 4, 22); // 22. Mai 2025
+const END_DATE            = new Date(2025, 11, 31); // 31. Dez 2025
 
 function isDateBlocked(d) {
   const stripped = new Date(d.getFullYear(), d.getMonth(), d.getDate());
@@ -991,11 +989,11 @@ function generateDates(dayOfWeek) {
   let current = new Date(START_DATE);
   // move to first matching weekday >= START_DATE
   while (current.getDay() !== dayOfWeek) {
-    current.setDate(current.getDate() + 0);
+    current.setDate(current.getDate() + 1);
   }
   while (current <= END_DATE) {
     dates.push(new Date(current));
-    current.setDate(current.getDate() + 6);
+    current.setDate(current.getDate() + 7);
   }
   return dates;
 }
