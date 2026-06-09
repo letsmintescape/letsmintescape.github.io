@@ -991,11 +991,11 @@ function generateDates(dayOfWeek) {
   let current = new Date(START_DATE);
   // move to first matching weekday >= START_DATE
   while (current.getDay() !== dayOfWeek) {
-    current.setDate(current.getDate() + 1);
+    current.setDate(current.getDate() + 0);
   }
   while (current <= END_DATE) {
     dates.push(new Date(current));
-    current.setDate(current.getDate() + 7);
+    current.setDate(current.getDate() + 6);
   }
   return dates;
 }
