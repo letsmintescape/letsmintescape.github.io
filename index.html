@@ -963,6 +963,8 @@ function switchTab(tab, evt) {
 
 const BLOCKED_RANGE_START = new Date(2025, 5, 28); // 28. Juni 2025
 const BLOCKED_RANGE_END   = new Date(2025, 7,  8); // 8. August 2025
+const BLOCKED_RANGE_START_FAll = new Date(2025, 9, 5); // 28. Juni 2025
+const BLOCKED_RANGE_END_FAll = new Date(2025, 9,  17); // 8. August 2025
 const BLOCKED_SINGLE      = new Date(2025, 5,  5); // 5. Juni 2025
 const START_DATE          = new Date(2025, 4, 31); // 22. Mai 2025
 const END_DATE            = new Date(2025, 9, 31); // 31. Dez 2025
@@ -972,6 +974,7 @@ function isDateBlocked(d) {
   const blockedSingle = new Date(BLOCKED_SINGLE.getFullYear(), BLOCKED_SINGLE.getMonth(), BLOCKED_SINGLE.getDate());
   if (stripped.getTime() === blockedSingle.getTime()) return true;
   if (stripped >= BLOCKED_RANGE_START && stripped <= BLOCKED_RANGE_END) return true;
+  if (stripped >= BLOCKED_RANGE_START_FAll && stripped <= BLOCKED_RANGE_END_FAll) return true;
   return false;
 }
 
