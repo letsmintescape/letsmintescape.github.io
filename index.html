@@ -961,13 +961,13 @@ function switchTab(tab, evt) {
 // Gesperrter Einzeltag: 5. Juni 2025
 // Gesperrter Zeitraum: 28. Juni – 8. August 2025
 
-const BLOCKED_RANGE_START = new Date(2025, 5, 28); // 28. Juni 2025
-const BLOCKED_RANGE_END   = new Date(2025, 7,  8); // 8. August 2025
-const BLOCKED_RANGE_START_FAll = new Date(2025, 9, 5); // 28. Juni 2025
-const BLOCKED_RANGE_END_FAll = new Date(2025, 9,  17); // 8. August 2025
-const BLOCKED_SINGLE      = new Date(2025, 5,  5); // 5. Juni 2025
-const START_DATE          = new Date(2025, 4, 31); // 22. Mai 2025
-const END_DATE            = new Date(2025, 9, 31); // 31. Dez 2025
+const BLOCKED_RANGE_START = new Date(2026, 5, 28); // 28. Juni 2025
+const BLOCKED_RANGE_END   = new Date(2026, 7,  8); // 8. August 2025
+const BLOCKED_RANGE_START_FAll = new Date(2026, 9, 5); // 28. Juni 2025
+const BLOCKED_RANGE_END_FAll = new Date(2026, 9,  17); // 8. August 2025
+const BLOCKED_SINGLE      = new Date(2026, 5,  5); // 5. Juni 2025
+const START_DATE          = new Date(2026, 4, 31); // 22. Mai 2025
+const END_DATE            = new Date(2026, 9, 31); // 31. Dez 2025
 
 function isDateBlocked(d) {
   const stripped = new Date(d.getFullYear(), d.getMonth(), d.getDate());
@@ -1020,7 +1020,7 @@ function renderDatePicker(slot) {
   const label = document.getElementById('date-picker-label');
   const grid = document.getElementById('date-grid');
 
-  const dayOfWeek = slot === 'friday' ? 4 : 5;
+  const dayOfWeek = slot === 'friday' ? 5 : 6;
   const dayLabel = slot === 'friday' ? 'FREITAGE' : 'SAMSTAGE';
   label.textContent = `// VERFÜGBARE ${dayLabel} —`;
 
